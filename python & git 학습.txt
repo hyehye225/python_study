@@ -1,0 +1,32 @@
+1) git log 나가기
+q
+
+2) git 사용자 이름, 이메일 변경
+git config user.name ""
+git config user.email ""
+
+3) git 현재 사용자 확인
+git config user.name
+git config user.email
+
+4) git clone > permission denied 시
+ssh key 생성 필요
+
+5) git fetch & git pull
+> 둘다 원격 저장서로부터 데이터를 가져오는 명령이지만, 작동 방식과 목적에서 차이가 있다.
+
+5-1) fetch
+원격 저장소에서 최신 커밋과 브랜치를 로컬 저장소로 가져온다.
+원격 브랜치의 상태를 업데이트하지만, 현재 체크아웃된 로컬 브랜치에는 변화를 주지 않는다.
+> 안전하게 원격 저장소의 상태를 로컬에서 확인 가능
+ex ) git fetch origin
+
+단순히 원격의 변경사항을 가져오기만 하고, 로컬의 현재 브랜치에는 변경 x
+
+5-2) pull
+git fetch와 git merge를 결합한 명령어
+원격 저장소의 데이터를 가져온 후, 현재 체크아웃된 브랜치에 해당 데이터를 병합한다.
+
+git fetch는 보다 안전하게 원격 저장소의 상태를 로컬에서 반영 <>
+git pull은 빠르게 최신 상태로 작업할 수 있는 편리함 제공 but 충돌 발생의 여지 있음
+

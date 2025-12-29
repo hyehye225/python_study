@@ -2,6 +2,8 @@ import numpy as np
 
 # numpy
 # 현재의 배열의 차원을 변경하여 행렬을 반환하거나 하는 경우에 많이 이용
+# Python 에서 과학 연산을 위한 가장 기본적인 패키지 중 하나
+# Numeric Python 의 약자
 
 # 배열의 슬라이싱
 # 다차원 배열의 원소 중 복수 개를 접근하려면 일반적인 파이썬 슬라이싱과 comma 를 함께 사용
@@ -13,7 +15,6 @@ arr3 = np.arange(20).reshape(5,4) # 5행 4열의 다차원 배열로 반환
 #  [ 8  9 10 11]
 #  [12 13 14 15]
 #  [16 17 18 19]]
-
 print(arr3)
 print(arr3[0, :]) # [0 1 2 3]
 print(arr3[1:3, 0:2]) 
@@ -74,29 +75,29 @@ print(type(a)) # <class 'numpy.ndarray'>
 # 것만으로도 원하는 결과를 얻을 수 있다.
 a = np.array([0,1,2,3,4,5,6,7,8,9])
 a2 = a**2
-print(a2) # [ 0  1  4  9 16 25 36 49 64 81]
-
-a = np.array([1,2,3])
-b = np.array([[1,2,3],[4,5,6]])
-c = np.array([[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]]])
+print(a2) # array([ 0  1  4  9 16 25 36 49 64 81], dtype=int32)
 
 # 행렬의 차원 및 크기는 ndim 속성과 shape 속성으로 알 수 있다.
-# ndim : 3
-# shape : 몇 행, 몇 열 인지
-print(a.ndim) # 1
-print(a.shape) # (3,)
-print(b.ndim) # 2
-print(b.shape) # (2,3)
-print(c.ndim) # 3
-print(c.shape) # (2,2,3)
-
+print(a)
+# [0 1 2 3 4 5 6 7 8 9]
+print(b)
+#[[1 2 3 4]
+#  [5 6 7 8]]
 print(c)
-# [[[ 1  2  3]
-#   [ 4  5  6]]
+#[[1 2]
+#  [3 4]
+#  [5 6]
+#  [7 8]]
 
-#  [[ 7  8  9]
-#   [10 11 12]]]
-print(c[0,0,:]) # [1 2 3]
-print(c[0,0,1:]) # [2 3]
+print(a.ndim) # 1
+print(a.shape) # (10,)
+print(b.ndim) # 2
+print(b.shape) # (2,4)
+print(c.ndim) # 2
+print(c.shape)  # (4,2)
+
+# a, b, C 배열 코드 추가 안 하여 오류 뜸, 일단 주석처리
+# print(c[0,0,:])
+# print(c[0,0,1:])
 
 
